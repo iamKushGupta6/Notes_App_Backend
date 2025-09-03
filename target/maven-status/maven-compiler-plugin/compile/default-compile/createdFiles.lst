@@ -2,8 +2,13 @@ com\example\NotesApp\Model\UserDTO.class
 com\example\NotesApp\Repositary\UserRepository.class
 com\example\NotesApp\Security\AppUserDetailsService.class
 com\example\NotesApp\Controller\AuthController.class
-com\example\NotesApp\Controller\AuthController$LoginResponse.class
+com\example\NotesApp\Service\NoteService.class
+com\example\NotesApp\NotesAppApplication.class
+com\example\NotesApp\Security\JwtUtil.class
+com\example\NotesApp\Model\Note.class
 com\example\NotesApp\Service\UserService.class
+com\example\NotesApp\Security\JwtFilter.class
 com\example\NotesApp\Model\User.class
 com\example\NotesApp\Controller\NoteController.class
 com\example\NotesApp\Security\SecurityConfig.class
+com\example\NotesApp\Repositary\NoteRepository.class
