@@ -3,13 +3,15 @@ package com.example.NotesApp.Service;
 
 import com.example.NotesApp.Model.Note;
 import com.example.NotesApp.Repositary.NoteRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Optional;
 @Service
 public class NoteService {
-    private final NoteRepository repo;
+    @Autowired
+    private  NoteRepository repo;
     public NoteService(NoteRepository repo) {
         this.repo = repo;
     }

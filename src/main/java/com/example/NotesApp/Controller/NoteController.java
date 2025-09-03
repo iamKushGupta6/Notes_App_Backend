@@ -6,6 +6,7 @@ import com.example.NotesApp.Model.User;
 import com.example.NotesApp.Repositary.UserRepository;
 import com.example.NotesApp.Security.JwtUtil;
 import com.example.NotesApp.Service.NoteService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
@@ -15,9 +16,12 @@ import java.util.Map;
 @RequestMapping("/api/notes")
 @CrossOrigin(origins = "https://notes-app-atzz.vercel.app/")
 public class NoteController {
-    private final NoteService service;
-    private final UserRepository userRepo;
-    private final JwtUtil jwtUtil;
+    @Autowired
+    private  NoteService service;
+    @Autowired
+    private  UserRepository userRepo;
+    @Autowired
+    private  JwtUtil jwtUtil;
     public NoteController(NoteService service, UserRepository userRepo, JwtUtil jwtUtil) { this.service = service; this.userRepo = userRepo; this.jwtUtil = jwtUtil; }
     private Long currentUserId(Authentication auth) {
         String username = auth.getName();
